@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixku Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- PROFILE TOKO -->
+<div class="store-profile">
+    <img src="profile shop.png" class="store-avatar">
+    <h1 class="store-name">Mixku Shop</h1>
+    <p class="store-desc">Toko Resmi Mixku Shop — Jasa, Produk Digital, dan Lainnya.</p>
+</div>
+
+<header>
+    <h1>Mixku Shop</h1>
+    <p>Pilih produk yang ingin kamu beli</p>
+</header>
+
+<!-- SOSMED -->
+<section class="social-section">
+    <h2>Jangan lupa follow akun Mimin 🤍</h2>
+
+    <div class="social-links">
+
+        <!-- YOUTUBE -->
+        <a href="https://youtube.com/@Official.AJMSTUDIO"
+           target="_blank" class="social-card btn-click">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+            <span>YouTube</span>
+        </a>
+
+        <!-- TIKTOK -->
+        <a href="https://www.tiktok.com/@Mixku_1"
+           target="_blank" class="social-card btn-click">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">
+            <span>TikTok</span>
+        </a>
+
+    </div>
+</section>
+
+<!-- PRODUK -->
+<section class="product-grid">
+
+    <div class="product-card btn-click">
+        <img src="produk 1.png" alt="Produk 1">
+        <h3>Aplikasi Editing</h3>
+        <p class="price">Rp 5.000</p>
+
+        <a class="buy-btn btn-click"
+           href="https://wa.me/62895393930680?text=Halo+min,+saya+ingin+membeli+Aplikasi+Editing"
+           target="_blank">Beli via WhatsApp</a>
+    </div>
+
+    <div class="product-card btn-click">
+        <img src="produk 2.png" alt="Produk 2">
+        <h3>Jasa Editing</h3>
+        <p class="price">Rp 10.000-Rp 20.000</p>
+
+        <a class="buy-btn btn-click"
+           href="https://wa.me/62895393930680?text=Halo+min,+saya+ingin+membeli+Jasa+Editing"
+           target="_blank">Beli via WhatsApp</a>
+    </div>
+
+    <div class="product-card btn-click">
+        <img src="produk 3.png" alt="Produk 3">
+        <h3>Jasa Membuat Website</h3>
+        <p class="price">Rp 100.000-Rp 500.000</p>
+
+        <a class="buy-btn btn-click"
+           href="https://wa.me/62895393930680?text=Halo+min,+saya+ingin+Jasa+Website+nya+mimin"
+           target="_blank">Beli via WhatsApp</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© AJM STUDIO</p>
+</footer>
+
+
+<!-- ========================================= -->
+<!-- PARTIKEL JAVASCRIPT (DITAMBAHKAN DI SINI) -->
+<!-- ========================================= -->
+<script>
+document.querySelectorAll('.btn-click').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+
+        for (let i = 0; i < 12; i++) {
+            const p = document.createElement('span');
+            p.classList.add('particle');
+            
+            const angle = Math.random() * 2 * Math.PI;
+            const distance = Math.random() * 60 + 20;
+
+            p.style.left = e.clientX + 'px';
+            p.style.top = e.clientY + 'px';
+            p.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+            p.style.setProperty('--y', Math.sin(angle) * distance + 'px');
+
+            document.body.appendChild(p);
+
+            setTimeout(() => p.remove(), 600);
+        }
+    });
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
